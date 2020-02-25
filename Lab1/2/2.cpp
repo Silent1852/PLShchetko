@@ -1,4 +1,4 @@
-﻿#include <iostream> 
+#include <iostream>
 #include <fstream> 
 #include <string> 
 using namespace std;
@@ -6,18 +6,17 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	int a, b,c, k, size;
-	cout << "Введите размер массива: ";
-	cin >> size;
-	int* arr = new int[size];
+	int a, b, c, k, size;
 	cout << "Введите интервал [a,b]:" << endl;
 	cout << "a= ";
 	cin >> a;
 	cout << "b= ";
 	cin >> b;
+	size = b - a + 1;
+	int* arr = new int[size];
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] =a+rand() % (b-a+1);
+		arr[i] = a + rand() % (b - a + 1);
 		cout << arr[i] << endl;
 	}
 	cout << "Введите значение k: ";
@@ -33,7 +32,7 @@ int main()
 				p = p * 10;
 				c = abs(c) / 10;
 			}
-			arr[i] = -1*(k * p - arr[i]);
+			arr[i] = -1 * (k * p - arr[i]);
 		}
 		cout << arr[i] << endl;
 	}
