@@ -18,7 +18,7 @@ int main()
 		fs.getline(arr[r], len - 1, ch); //Считываем строки в массив
 	}
 	strcpy_s(string_3, arr[2]); //копируем отедельно нужную строку
-	cout << "Первоначальный вид строки: " << string_3 << endl;
+	cout << "Первоначальный вид строки: \n"<< string_3 << endl;
 	char* str = new char[300];
 	str = string_3;
 	int words[150];
@@ -49,6 +49,7 @@ int main()
 	{
 		cout << &str[words[i]] << " ";
 	}
+	cout << endl;
 	fs.close(); //Закрываем файл
 	return 0;
 }
